@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MonitorOS Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="notification"></div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<h2 class="logo">MonitorOS</h2>
+
+<nav>
+
+<a class="navItem active">Dashboard</a>
+<a class="navItem">Network</a>
+<a class="navItem">Performance</a>
+<a class="navItem">Storage</a>
+<a class="navItem">Settings</a>
+
+</nav>
+
+</aside>
+
+<!-- MAIN -->
+
+<main class="main">
+
+<header>
+
+<h1>System Monitor</h1>
+
+<div id="clock"></div>
+
+</header>
+
+<section class="grid">
+
+<section class="serverSection">
+
+<h2>Server Status</h2>
+
+<div class="serverGrid">
+
+<div class="serverCard">
+<h4>Web Server</h4>
+<p>Status: <span class="online">Online</span></p>
+</div>
+
+<div class="serverCard">
+<h4>Database</h4>
+<p>Status: <span class="online">Online</span></p>
+</div>
+
+<div class="serverCard">
+<h4>API Gateway</h4>
+<p>Status: <span class="online">Online</span></p>
+</div>
+
+<div class="serverCard">
+<h4>Backup Server</h4>
+<p>Status: <span class="warning">Warning</span></p>
+</div>
+
+</div>
+
+</section>
+
+<div class="card clickable">
+
+<h3>Speed Test</h3>
+
+<div class="speedMeter">
+
+<div class="speedNumber" id="speedNumber">0</div>
+
+<div class="speedLabel">Mbps</div>
+
+</div>
+
+<button id="startTest" class="controlBtn">Start Test</button>
+
+</div>
+
+<div class="card clickable">
+
+<h3>Live Network Traffic</h3>
+
+<canvas id="trafficChart"></canvas>
+
+</div>
+
+<div class="card clickable">
+
+<h3>CPU Usage</h3>
+
+<canvas id="cpuChart"></canvas>
+
+</div>
+
+<div class="card clickable">
+
+<h3>RAM Usage</h3>
+
+<canvas id="ramChart"></canvas>
+
+</div>
+
+<div class="card clickable">
+
+<h3>Internet Speed</h3>
+
+<canvas id="speedChart"></canvas>
+
+</div>
+
+<div class="card clickable">
+
+<h3>Storage</h3>
+
+<div class="storageBar">
+
+<div id="storageFill"></div>
+
+</div>
+
+<p id="storageText"></p>
+
+</div>
+
+</section>
+
+<!-- CONTROL CENTER -->
+
+<section class="controlCenter">
+
+<h3>Quick Controls</h3>
+
+<div class="controls">
+
+<button class="controlBtn">WiFi</button>
+<button class="controlBtn">Bluetooth</button>
+<button id="darkToggle" class="controlBtn">Toggle Theme</button>
+
+</div>
+
+</section>
+
+<footer>
+
+Credit by <b>Agus Satria Adhitama</b>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
